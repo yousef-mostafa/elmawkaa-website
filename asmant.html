@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+    <head>
+        <meta charset="utf-8">
+        <title>اطلب عرض سعر من منصة الموقع</title>
+        <link rel="icon" sizes="15x15" href="https://elmawkaa.com/img/htmlLogo.png" >
+        <link rel="stylesheet" type="text/css" href="اسمنت معبأ.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- start navbar-->
+        <div class="navbar">
+            <div class="container">
+                <!-- links -->
+                <ul>
+                    <li><a href="home">الرئيسية</a></li>
+                    <li><a href="shop">مواد بناء</a></li>
+                    <li><a href="new-orders">أحدث الطلبيات</a></li>
+                    <li><a href="how-it-work">كيف يعمل؟</a></li>
+                    <li><a href="regist-as-supplier">سجل معنا كمورد</a></li>
+                    <li><a href="blog">المدونه</a></li>
+                    <li><a href="#">الباقات</a></li>
+                    <li><a href="app">حمل التطبيق</a></li>
+                    <li><a href="call-us">اتصل بنا</a></li>
+                </ul>
+                <!--another navbar section-->
+                <div class="nav-sec">
+                    <div class="dropdown">
+                        <button><img src="https://elmawkaa.com/flags/4x3/egy.svg" alt="Egypt-flag-icon"></button>
+                        <div class="content" style="display: none;"> <!-- display -> block when user    click on the button above-->
+                            <a><img src="https://elmawkaa.com/flags/4x3/sau.svg" alt="Saudi-flag-icon"> المملكة العربية السعودية</a>
+                        </div>
+                    </div>
+                    <a href="home" id="logo"><img alt="logo" src="https://elmawkaa.com/img/logo.png"></a>
+                </div>
+            </div>
+        </div>
+        <!-- end navbar-->
+        <!-- start header-->
+        <div class="header">
+            <div class="overlay">
+                <div class="container">
+                    <div class="form-body">
+                        <div class="top" style="text-align: center;">
+                        <a href="#" class="help-btn">اضغط هنا لتعرف كيف تعمل المنصة</a>
+                        <p>طلب عرض سعر</p>
+                        <div class="product">
+                            <p>أسمنت معبأ</p>
+                            <img src="https://dl.airtable.com/.attachments/1f770b0c5d0fdc526d297b7c835318a9/c1028e81/cement.jpg">
+                        </div>
+                        </div>
+                        <div id="progres-btn">
+                            <button class="steps-btn active">
+                                <span>1</span>
+                                معلومات المنتح
+                            </button>
+                            <button class="steps-btn">
+                                <span>2</span>
+                                المشروع
+                            </button>
+                            <button class="steps-btn">
+                                <span>3</span>
+                                تفاصيل أخرى
+                            </button>
+                            <button class="steps-btn">
+                                <span>4</span>
+                                ازاى نوصلك
+                            </button>
+                        </div>
+                        <!--1   معلومات المنتج-->
+                        <form class="form" id="form1" style="display: block;">
+                            <label>اسم المنتج المطلوب<span>*</span></label><br>
+                            <input type="text" required><br>
+                            <label>الكمية<span>*</span></label><br>
+                            <input type="number" required><br>
+                            <label>الوحدة<span>*</span></label><br>
+                            <select id="unit" name="unit" style="background-color: #eeeeee; width:40%" disabled>
+                                <option value="طن"> طن</option>
+                            </select><br>
+                            <button>اضف صورة للمنتج</button><br>
+                            <label>رتبة الاسمنت<span>*</span></label><br>
+                            <select id="asmant-degree" name="asmant degree" style="width: 100%;" required>
+                                <option value="42.5">42.5</option>
+                                <option value="52.5">52.5</option>
+                                <option value="32.5">32.5</option>
+                            </select><br>
+                            <label>نوع الاسمنت<span>*</span></label><br>
+                            <select id="asmant-type" name="asmant-type" style="width: 100%;" required>
+                                <option value="عادى">عادى</option>
+                                <option value="مقاوم">مقاوم</option>
+                            </select><br>
+                            <label>المصنع</label><br>
+                            <input type="text" required style="width: 100%;">
+                        </form>
+                        <!-- 2   المشروع-->
+                        <form class="form" id="form2" style="display: none;">
+                            <label>مكان المشروع<span>*</span></label><br>
+                            <select id="pproject-location" name="project-location">
+                                <option style="display:none" selected>أختر مكان المشروع</option>
+                                <option  value="6اكتوبر - الجيزه"> 6اكتوبر - الجيزه</option>
+                                <option value="القاهرةالجديده - التجمع -القاهره">القاهرةالجديده - التجمع -القاهره </option>
+                                <option value="مدينة الشروق - القاهرة">مدينة الشروق - القاهرة</option>
+                            </select><br>
+                            <label>عنوان المشروع<span>*</span></label><br>
+                            <input type="text" required placeholder="ادخل عنوان المشروع"><br>
+                            <label>مرحلة المشروع<span>*</span></label><br>
+                            <select id="project-status" name="project-status" required>
+                                <option style="display:none" selected></option>
+                                <option value="مرحلة التنفيذ">مرحلة التنفيذ</option>
+                                <option value="مرحلة تقديم المناقصات">مرحلة تقديم المناقصات</option>
+                            </select><br>
+                            <label>عاوز تنفذ الطلبية امتى؟<span>*</span></label><br>
+                            <input type="date" required>
+                        </form>
+                        <!-- 3   تفاصيل أخرى -->
+                        <form class="form" id="form3" style="display: none;">
+                            <label>طريقة الدفع<span>*</span></label><br>
+                            <select id="pay-way" name="pay-way">
+                                <option style="display:none" selected></option>
+                                <option  value="كاش">كاش</option>
+                                <option value="">تحويل بنكى </option>
+                            </select><br>
+                            <p>الدفع بالآجل متاح فقط للمقاولين الذين نفذوا<br>أكثر من عمليتين وحسب شروط وموافقة المورد</p>
+                            <label>تفاصيل اخرى خاصه بالطلب<span>*</span></label><br>
+                            <textarea placeholder="تفاصيل أخرى مثل المواصفات و المقاسات و الاعتمادات المطلوبة"></textarea>
+                        </form>
+                        <!--4   ازاى نوصلك-->
+                        <form class="form" id="form4" style="display: none;">
+                            <label>اسم شركتك اية؟<span>*</span></label><br>
+                            <input type="text" required placeholder="اسم شركتك اية؟"><br>
+                            <label>اسم الشخص المفوض ثنائي<span>*</span></label><br>
+                            <input type="text" required placeholder="اسم الشخص المفوض ثنائي"><br>
+                            <label>رقم الموبايل المسجل عالواتساب<span>*</span></label><br>
+                            <input type="text" required pattern="^01[0125][0-9]{8}$" placeholder="مثال :01142660528"><br>
+                            <label>ايميلك<span>*</span></label><br>
+                            <input type="email" required placeholder="مثال :yousef@gmail.com"><br>
+                            <input type="checkbox" value="تذكرنى على هذا الجهاز" checked>
+                            <label>تذكرنى على هذا الجهاز </label><br>
+                            <input type="checkbox" value="تذكر المشروع" checked>
+                            <label>تذكر المشروع </label>
+                        </form>
+                        <button id="back-btn" class="steps-move" style="float: right;">السابق</button>
+                        <button id="next-btn" class="steps-move" style="float: left;">التالى</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header-->
+
+        <!-- start footer-->
+        <div class="footer">
+            <div class="container">
+                <div class="social">
+                    <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+                <div class="copy-rights">2022 حقوق النشر - Elmawkaa, Inc. | جميع الحقوق محفوظة</div>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+
+        <!-- link js file -->
+        <script src="اسمنت معبأ.js"></script>
+    </body>
+</html>

@@ -1,0 +1,207 @@
+/* start global */
+
+*{box-sizing:border-box}
+
+.container{width: 1050px;margin: auto}
+
+a{text-decoration: none;}
+
+body{margin: 0; font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;}
+/* end global */
+
+/* start navbar */
+.navbar{
+    height: 60px;
+    background-color: rgb(57, 58, 59 , 95%);
+    position:sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul{
+    list-style-type: none;
+    float: right;
+    padding-right: 5px;
+    width: 73%;
+}
+.navbar ul li{float: right;}
+
+.navbar ul li a{
+    display: block;
+    text-align: center;
+    padding: 0px 0px 0px 30px;
+    color: white;
+    font-weight:bold ;
+}
+.navbar ul li a:hover{color: #b4b3b2;}
+
+/* other navbar section */
+.navbar .nav-sec{float: right;width: 27%;
+}
+/* dropdown about Egypt or Saudi (Egypt is default) */
+.navbar .nav-sec .dropdown{float: right;padding-top: 5px;}
+
+.navbar .nav-sec .dropdown button{
+    padding: 15px 20px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.navbar .nav-sec .dropdown img{width: 25px;height: 20px;}
+
+.navbar .nav-sec .dropdown button::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 5px solid;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    top: 22px;
+    right: 50px;
+}
+.navbar .nav-sec .dropdown .content{
+    position: absolute;
+    left: 365px;
+    z-index: 1;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+.navbar .nav-sec .dropdown .content:hover{background-color: #f8f9fa;cursor: pointer;}
+
+.navbar .nav-sec #logo img{
+    margin: 5px 20% 0px 0;
+    width: 54%;
+}
+/* end navbar */
+
+/* start header */
+.header{
+    height: 450px;
+    background-image:url(https://elmawkaa.com/img/bg/home-bg.jpg) ;
+    background-size: 100%;
+}
+/* overlay layer for opacity*/
+.header .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 150px;
+    color: white;
+    text-align: center;
+}
+.header .overlay h1{font-size: 60px;margin-bottom:5px;}
+
+.header .overlay p{font-size: 18px;}
+
+.header .overlay input{
+    width: 60%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+.header .overlay i{
+    background-color: #935cae;
+    padding: 25px 8px 15px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.header .overlay i:hover{background-color: #6f4584;color: #212529;}
+/* end header */
+
+/* start offers */
+.offers{
+    height: 900px;
+    color: #333333;
+}
+.offers h1{text-align: center;font-size: 50px;}
+.offers .gallery .card{
+    float: right;
+    width: 32%;
+    height: 370px;
+    margin-left: 1% ;
+    margin-bottom: 1%;
+    border-radius: 35px;
+    background-size: 100%;
+}
+.offers .gallery .card .overlay{
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    padding: 10px;
+    padding-top: 40px;
+}
+.offers .gallery .card:hover{cursor: pointer;}
+
+.offers .gallery .card:hover .overlay{background-color: rgb(195, 195, 195 ,50%); transition: .1s ease;}
+
+.offers .gallery .card:hover .overlay p{color: white;}
+
+.offers .gallery .card .overlay p::before{
+    content: "";
+    display: block;
+    width: 70px;
+    border-top:4px solid #935cae;
+    border-radius: 2px;
+    padding-bottom: 10px;
+}
+.offers .gallery .card .overlay p{
+    font-size: 25px;
+    margin-top: 0;
+    margin-right: 40px;
+}
+
+.offers .gallery .card .overlay .text{
+    float: right;
+    position: relative;
+    bottom: -185px;
+    background-color: rgb(242, 245, 249 , 75%);
+    border-radius: 15px;
+    padding: 4px 8px;
+    margin:0px 2px 5px 5px;
+}
+/* end offers */
+
+/* start footer */
+.footer{
+    padding-top: 50px;
+    text-align: center;
+}
+.footer .contact-us {
+    float: right;
+    width: 33.33%;
+    color: #333333;
+}
+.footer .contact-us i{font-size: 45px;}
+
+.footer .phone p{color: #935cae;}
+
+.footer .phone p:hover{color:#c3c3c3 ; cursor: pointer;}
+
+/* start last footer */
+.footer .last-footer{
+    height: 70px;
+    background-color: #313238;
+    padding:25px ;
+    color:white;
+}
+.footer .last-footer .social{float: right;}
+
+.footer .last-footer .social i{
+    color: white; 
+    margin-left: 40px;
+    font-size: 20px;
+}
+/* colorful social icons on hover*/
+.footer .last-footer .social .fa-linkedin:hover{color:#3c62ad }
+.footer .last-footer .social .fa-instagram:hover{color:#db3f90;}
+.footer .last-footer .social .fa-twitter:hover{color:#72c8d9 }
+.footer .last-footer .social .fa-facebook:hover{color: #4f689e;}
+
+.footer .last-footer .copy-rights{float: left;}
+/* end footer */

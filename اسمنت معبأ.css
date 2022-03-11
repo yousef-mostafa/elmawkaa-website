@@ -1,0 +1,238 @@
+/* start global */
+
+*{box-sizing:border-box}
+
+.container{width: 1050px;margin: auto}
+
+a{text-decoration: none;}
+
+
+body{margin: 0; font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;}
+/* end global */
+
+/* start navbar */
+.navbar{
+    height: 60px;
+    background-color: rgb(57, 58, 59 , 95%);
+    position:sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul{
+    list-style-type: none;
+    float: right;
+    padding-right: 5px;
+    width: 73%;
+}
+.navbar ul li{float: right;}
+
+.navbar ul li a{
+    display: block;
+    text-align: center;
+    padding: 0px 0px 0px 30px;
+    color: white;
+    font-weight:bold ;
+}
+.navbar ul li a:hover{color: #b4b3b2;}
+
+/* other navbar section */
+.navbar .nav-sec{float: right;width: 27%;
+}
+/* dropdown about Egypt or Saudi (Egypt is default) */
+.navbar .nav-sec .dropdown{float: right;padding-top: 5px;}
+
+.navbar .nav-sec .dropdown button{
+    padding: 15px 20px;
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+.navbar .nav-sec .dropdown img{width: 25px;height: 20px;}
+
+.navbar .nav-sec .dropdown button::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 5px solid;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    top: 22px;
+    right: 50px;
+}
+.navbar .nav-sec .dropdown .content{
+    position: absolute;
+    left: 365px;
+    z-index: 1;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+.navbar .nav-sec .dropdown .content:hover{background-color: #f8f9fa;cursor: pointer;}
+
+.navbar .nav-sec #logo img{
+    margin: 5px 20% 0px 0;
+    width: 54%;
+}
+/* end navbar */
+
+/* start header */
+.header{
+    height: auto;
+    background-image:url(https://elmawkaa.com/img/bg/home-bg.jpg) ;
+    background-size: 100%;
+}
+/* overlay layer for opacity*/
+.header .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(230, 230, 230, 0.8);
+    padding-top: 50px;
+    color: white;
+    padding-bottom: 25px;
+}
+
+
+.header .form-body{
+    margin: 0px auto ;
+    background-color: #ffffff;
+    border:2px solid #ced4da ;
+    border-radius: 10px;
+    width: 65%;
+    padding: 25px 10px 15px 10px;
+    overflow: hidden;
+    color: #868ba1;
+    font-family: 'Droid Arabic Kufi';
+}
+.header .form-body .help-btn{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #935cae;
+    border-radius: 10px;
+    color:#935cae ;
+    font-size: 18px;
+}
+.header .form-body .help-btn:hover{
+    background-color: #935cae;
+    color: white;
+    transition: .25s linear;
+}
+.header .form-body .product{margin: 5px;}
+.header .form-body .product p{font-size: 30px; margin: 0px;}
+.header .form-body .product img{width: 40%;border-radius: 5%;}
+.header .form-body .steps-btn{
+    color: white;
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header .form-body .visited{background-color: #6f42c1;}
+.header .form-body .steps-btn:hover{border-radius: 0; transition: .1s linear;}
+.header .form-body .steps-btn span{
+    padding: 2px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.header .form-body .active{
+    background-color: #935cae;
+    cursor:auto ;
+}
+
+/*global properties for all forms*/
+.header .form-body .form{
+    background-color: #e9ecef;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px ;
+    padding: 40px 30px 20px 35px;
+    transition: .2s linear;
+}
+.header .form-body .form input{
+    padding: 10px;
+    margin: 10px 3px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 45%;
+}
+.header .form-body .form label{margin:5px 0px ;}
+.header .form-body .form select{
+    padding: 7px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 45%;
+    margin: 10px 3px;
+}
+.header .form-body .form label span{color:  red;}
+
+/*specific properties for form 1 */
+.header .form-body #form1 button {
+    padding: 12px;
+    margin: 10px 3px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid #935cae;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*specific properties for form 3 */
+.header .form-body #form3 p{
+    color: red;
+    margin-top: 5px;
+    margin-right: 3px;
+}
+.header .form-body #form3 textarea{
+    margin: 10px 3px;
+    width: 30%;
+}
+/*specific properties for form 4 */
+.header .form-body #form4 {display: none;}
+.header .form-body #form4 input[type = checkbox]{
+    width: auto;
+}
+
+.header .form-body .steps-move{
+    padding: 12px 20px;
+    background-color: #935cae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    margin-bottom:0px ;
+    cursor: pointer;
+}
+/* end header */
+
+/* start footer */
+.footer {
+    height: 70px;
+    background-color: #313238;
+    padding:25px ;
+    color:white;
+}
+.footer .social{float: right;}
+
+.footer .social i{
+    color: white; 
+    margin-left: 40px;
+    font-size: 20px;
+}
+/* colorful social icons on hover*/
+.footer .social .fa-linkedin:hover{color:#3c62ad }
+.footer .social .fa-instagram:hover{color:#db3f90;}
+.footer .social .fa-twitter:hover{color:#72c8d9 }
+.footer .social .fa-facebook:hover{color: #4f689e;}
+
+.footer .copy-rights{float: left;}
+/* end footer */
